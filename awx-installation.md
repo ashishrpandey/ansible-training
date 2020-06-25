@@ -45,11 +45,19 @@ https://github.com/ashishrpandey/kubernetes-training/blob/master/helm/helm3-inst
 - Create a PV with 10 GB storage space. Modify the storage size to be 10 GB and use the file given below
 
     https://github.com/ashishrpandey/kubernetes-training/blob/master/06-storage/mongodb-pv-hostpath.yaml
+    
+ 
+- Execute the following to install AWX 
+              
+              $ ansible-playbook -i inventory install.yml
+              $ kubectl get pods --namespace awx
+              $ kubectl get svc --namespace awx
+
   
  
-  ## 
+  ## Access the AWX web UI
     
 -  As opposed to what is written in the README of AWX, there were 3 pods created in AWX namespace. 
 
-- use NodePort service named as awx-web-svc to access web UI
+- Use NodePort service named as awx-web-svc to access web UI
 - Username is "admin" and the password is "password"
